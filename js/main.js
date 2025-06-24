@@ -61,65 +61,20 @@ signInAnchor.addEventListener("click", function () {
   document.querySelector(".errorMessage").classList.add("d-none");
 });
 
-// function loginFun() {
-//   var emailValue = document.getElementById("inputEmailId").value;
-//   var passwordValue = document.getElementById("inputPasswordId").value;
-//   var nameValue = document.getElementById("inputNameId").value;
-
-//   if (!emailValue || !passwordValue ) {
-//     document.querySelector(".errorMessage").classList.remove("d-none");
-//     document.querySelector(".successMessage").classList.add("d-none");
-//   } else {
-//     document.querySelector(".successMessage").classList.remove("d-none");
-//     document.querySelector(".errorMessage").classList.add("d-none");
-//   }
-
-//   //   var storedUser = localStorage.getItem("userDataobject");
-
-//   if (storedUser) {
-//     var parsedUser = JSON.parse(storedUser);
-//     if (
-//       parsedUser.uEmail == emailValue &&
-//       parsedUser.uPassword == passwordValue
-//     ) {
-//       signInBtn.addEventListener("click", function () {
-//         document.querySelector(".login-inputs").classList.add("d-none");
-//       });
-
-//       signInBtn.addEventListener("click", function () {
-//         document.querySelector(".home-page-content").classList.remove("d-none");
-//       });
-
-//       document.querySelector(
-//         ".home-page-content h1"
-//       ).textContent = `Welcome ${parsedUser.uName}`;
-//       clearInputs();
-//     } else {
-//       document.querySelector(".loginError").classList.remove("d-none");
-//       document.querySelector(".successMessage").classList.add("d-none");
-//       document.querySelector(".errorMessage").classList.add("d-none");
-//     }
-//   }
-// }
-
 // logOut button in the navbar
-
 function loginFun() {
   var emailValue = document.getElementById("inputEmailId").value.trim();
   var passwordValue = document.getElementById("inputPasswordId").value.trim();
 
-  // Clear all messages initially
   document.querySelector(".errorMessage").classList.add("d-none");
   document.querySelector(".loginError").classList.add("d-none");
   document.querySelector(".successMessage").classList.add("d-none");
 
-  // If inputs are empty
   if (!emailValue || !passwordValue) {
     document.querySelector(".errorMessage").classList.remove("d-none");
     return;
   }
 
-  // Try to get user from localStorage
   var storedUser = localStorage.getItem("userDataobject");
 
   if (storedUser) {
@@ -129,7 +84,6 @@ function loginFun() {
       parsedUser.uEmail === emailValue &&
       parsedUser.uPassword === passwordValue
     ) {
-      // Success: show homepage and welcome message
       document.querySelector(".login-inputs").classList.add("d-none");
       document.querySelector(".home-page-content").classList.remove("d-none");
 
@@ -140,11 +94,9 @@ function loginFun() {
       document.querySelector(".successMessage").classList.remove("d-none");
       clearInputs();
     } else {
-      // Incorrect email or password
       document.querySelector(".loginError").classList.remove("d-none");
     }
   } else {
-    // No users found in localStorage
     document.querySelector(".loginError").classList.remove("d-none");
   }
 }
