@@ -1,0 +1,32 @@
+body {
+  height: 100vh;
+  background-color: #24353f;
+}
+
+.login-inputs {
+  width: 50%;
+  height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.login-content h2 {
+  color: #17a2b8;
+}
+
+.inputs input {
+  /* color: rgb(255, 255, 255) !important; */
+  font-weight: 400;
+  line-height: 24px;
+  background-color: transparent;
+}
+
+.home-page {
+  box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+  margin-top: 150px !important;
+}
+
+.nav-bar{
+    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+}

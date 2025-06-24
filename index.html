@@ -1,0 +1,89 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Login</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="login-inputs m-auto mt-5">
+      <div class="login-content">
+        <h2 class="text-center py-4">Smart Login System</h2>
+        <div class="inputs container">
+          <input
+            type="text"
+            id="inputNameId"
+            class="form-control mb-3 d-none"
+            placeholder="Enter Your Name"
+          />
+
+          <input
+            type="email"
+            id="inputEmailId"
+            class="form-control mb-3"
+            placeholder="Enter Your Email"
+          />
+
+          <input
+            type="password"
+            id="inputPasswordId"
+            class="form-control mb-3"
+            placeholder="Enter Your password"
+          />
+
+          <button
+            onclick="signUpFun()"
+            class="btn btn-outline-info w-100 my-3 d-none signUpBtn" >
+            Sign Up
+          </button>
+          <p class="errorMessage text-danger text-center d-none">
+            All inputs required
+          </p>
+          <p class="successMessage text-success text-center d-none">Success</p>
+
+          <button class="btn btn-outline-info w-100 my-3 d-none signInBtn">
+            Sign In
+          </button>
+
+          <button
+            onclick="loginFun()"
+            class="btn btn-outline-info w-100 my-3 loginBtn"
+          >
+            Login
+          </button>
+          <p class="loginError text-danger text-center d-none">Incorrect email or password</p>
+
+
+          <p class="text-white text-center d-none signInText">
+            You have an account?
+            <a href="#" class="signIn text-white"> Sign In</a>
+          </p>
+          <p class="text-white text-center signUpText">
+            Don’t have an account?
+            <a href="#" class="signUp text-white">Sign Up </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-page-content m-0 d-none">
+      <nav class="navbar navbar-expand-lg navbar-dark nav-bar">
+        <div class="container">
+          <a href="#" class="text-white text-decoration-none">SMART LOGIN</a>
+          <button class="btn btn-outline-warning" id="logOutBtnId">
+            Log Out
+          </button>
+        </div>
+      </nav>
+      <div
+        class="home-page w-50 p-5 m-auto d-flex justify-content-center align-items-center"
+      >
+        <h1 class="text-info">Welcom</h1>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
